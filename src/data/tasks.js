@@ -5,11 +5,11 @@ export const tasks = [
     },
     {
       id: 2,
-      message: "Call For Help",
+      message: "\nCall For Help",
     },
     {
       id: 3,
-      message: "Ensure Personal Safety",
+      message: "\nEnsure Personal Safety",
     },
   ];
   
