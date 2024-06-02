@@ -106,6 +106,7 @@ export const LandingPage = () => {
         <div className="px-6 my-6 mb-24">
           {tasks.map((item) => {
             return (
+                <div>
               <div className="inline-flex" key={item.id}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +114,7 @@ export const LandingPage = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1}
                   stroke="currentColor"
-                  className="size-10  text-white inline "
+                  className="size-10  text-white flex items-center "
                 >
                   <path
                     strokeLinecap="round"
@@ -122,6 +123,7 @@ export const LandingPage = () => {
                   />
                 </svg>
                 <h1 className="ml-3 text-md text-grey mb-2">{item.message}</h1>
+              </div>
               </div>
             );
           })}
