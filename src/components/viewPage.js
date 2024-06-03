@@ -101,7 +101,7 @@ export const ViewPage = () => {
               </Link>
             </div>
             <div className="text-center">
-              <Link>
+              <Link to="/first-aid">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill=""

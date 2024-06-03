@@ -5,6 +5,7 @@ import "./index.css";
 
 import { LandingPage } from "./components/landingPage";
 import { ViewPage } from "./components/viewPage";
+import { FirstAidPage } from "./components/firstAidPage";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -18,8 +19,8 @@ const router = createBrowserRouter([
     element: <ViewPage />,
   },
   {
-    path: "/",
-    element: <LandingPage />,
+    path: "/first-aid",
+    element: <FirstAidPage />,
   },
 ]);
 root.render(

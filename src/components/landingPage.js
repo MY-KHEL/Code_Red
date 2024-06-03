@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { hospitalData } from "../data/hospitalData";
 import { tasks } from "../data/tasks";
 
+import { SearchForm } from "./molecules/searchForm";
+
 export const LandingPage = () => {
 
+const placeHolder = 'Search hospitals'
   return (
     <>
       <div>
@@ -21,28 +24,7 @@ export const LandingPage = () => {
             <span className="text-red">Code-Red</span>
           </h1>
 
-          <form>
-           <div className="relative flex items-center justify-between">
-           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 absolute ml-3 mt-4 pointer-events-none text-red">
-         < path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-
-            <input
-              type="text"
-              name="search"
-              id="search"
-              autoComplete="off"
-              className=" relative bg-grey/25 border-none focus:border-none  rounded-md mt-4 w-full py-2 pl-10 "
-            />  
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 absolute mr-3 mt-4 pointer-events-none right-0 text-red">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-</svg>
-
-           </div>
-
-         
-         
-          </form >
+         <SearchForm placeHolder={placeHolder}/>
           <div className="flex items-center justify-end text-red mt-4">
             <Link to="/view-all">View All</Link>
           </div>
@@ -57,10 +39,10 @@ export const LandingPage = () => {
                   style={{
                     backgroundColor:
                       data.category === "busy"
-                        ? "rgba(13,96,216,.3)"
+                        ? "rgba(13,96,216,.2)"
                         : data.category === "available"
-                          ? "rgba(0,168,120,.3)"
-                          : "rgba(204,17,0,.3)",
+                          ? "rgba(0,168,120,.2)"
+                          : "rgba(204,17,0,.2)",
                     borderColor:
                       data.category === "busy"
                         ? "blue"
@@ -131,7 +113,7 @@ export const LandingPage = () => {
         <div className="p-2 px-4  ring-2 ring-grey/25  fixed bg-white  bottom-0 w-full ">
           <div className="flex justify-between items-center">
             <div className="text-center">
-              <Link>
+              <Link to ="/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#cc1100"
@@ -150,7 +132,7 @@ export const LandingPage = () => {
               </Link>
             </div>
             <div className="text-center">
-              <Link>
+              <Link to ="/first-aid" >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill=""
