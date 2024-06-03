@@ -1,3 +1,4 @@
+import { firstAidData } from "../data/firstAid"
 import { SearchForm } from "./molecules/searchForm"
 
 export const FirstAidPage = ()=>{
@@ -15,6 +16,25 @@ export const FirstAidPage = ()=>{
           <SearchForm placeHolder={placeHolder} />
           
            </div>
+           <div className="px-6 py-2">
+            <div className="flex justify-end items-center">
+                <h1 className="text-red text-sm">Watch more</h1> 
+            </div>
+           </div>
+           <div className="px-6 py-2">
+            <div className="flex justify-end items-center">
+                <h1 className="text-red text-sm">View more articles</h1> 
+            </div>
+            {firstAidData.map((item)=>{
+                return(
+                    <div  key={item.id}>
+                        <h1>{item.subheading}</h1>
+                        <p>{item.text}</p>
+                    </div>
+                )
+            })}
+           </div>
+
         </div>
         </>
     )
