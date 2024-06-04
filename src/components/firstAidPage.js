@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
+
 import { firstAidData } from "../data/firstAid"
 import { SearchForm } from "./molecules/searchForm"
 import { Link } from "react-router-dom";
