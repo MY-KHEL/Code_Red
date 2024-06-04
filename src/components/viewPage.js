@@ -83,7 +83,7 @@ export const ViewPage = () => {
           <div className="flex justify-between items-center">
             <div className="text-center">
               <Link to ="/">
-              <img src="c.svg" alt="emergency logo" className="text-center  inline"/>
+              <img src="bitcoin-icons_home-filled.png" alt="emergency logo" className="text-center  inline"/>
             
             <p className="text-grey text-xs">
              Home

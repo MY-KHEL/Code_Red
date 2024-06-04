@@ -29,7 +29,7 @@ export const FirstAidPage = ()=>{
                     <div className="grid grid-cols-4 ">
                       <div className="col-span-2">
                       <img src="./Vector.svg" alt="Burn accident"/>
-                          <p className="text-red2 text-xs mt-3 ">Learn CPR in 2 minutes </p>
+                          <p className="text-red2 text-sm mt-3 ">Learn CPR in 2 minutes </p>
                       </div>
                       <div className="col-span-2">
                         <img  src="./IMG-20240604-WA0018.jpg" alt="" className=" mt-4 "/>
@@ -41,7 +41,7 @@ export const FirstAidPage = ()=>{
                   <div className="grid grid-cols-4 ">
                       <div className="col-span-2">
                       <img src="./Vector.svg" alt="Burn accident"/>
-                          <p className="text-green text-xs  mt-3">What to do when you have burns </p>
+                          <p className="text-green text-sm  mt-3">What to do when you have burns </p>
                       </div>
                       <div className="col-span-2">
                         <img  src="./IMG-20240604-WA0021.jpg" alt="" className=" mt-4  w-3/4"/>
@@ -54,7 +54,7 @@ export const FirstAidPage = ()=>{
            </div>
            <div className="px-6 py-2 mb-32">
             <div className="flex justify-end items-center">
-                <h1 className="text-red2 text-sm">View more articles</h1> 
+                <h1 className="text-red3 text-sm">View more articles</h1> 
             </div>
             {firstAidData.map((item)=>{
                 return(
