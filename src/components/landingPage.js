@@ -19,13 +19,13 @@ const placeHolder = 'Search hospitals'
             alt="logo"
             className="w-[128px]"
           />
-          <h1 className="text-4xl mt-4">
+          <h1 className="text-[65px] mt-4 leading-8" >
             Locate Bed Space Fast with{" "}
-            <span className="text-red">Code-Red</span>
+            <span className="text-red3">Code-Red</span>
           </h1>
 
          <SearchForm placeHolder={placeHolder}/>
-          <div className="flex items-center justify-end text-red mt-4">
+          <div className="flex items-center justify-end text-red3 mt-4">
             <Link to="/view-all">View All</Link>
           </div>
         </div>
@@ -38,28 +38,28 @@ const placeHolder = 'Search hospitals'
                   className="  border-2   p-3 w-60 rounded-md"
                   style={{
                     backgroundColor:
-                      data.category === "busy"
-                        ? "rgba(13,96,216,.2)"
-                        : data.category === "available"
-                          ? "rgba(0,168,120,.2)"
-                          : "rgba(204,17,0,.2)",
+                      data.category === "Busy"
+                        ? "rgba(13,96,216,.09)"
+                        : data.category === "Available"
+                          ? "rgba(0,168,120,.09)"
+                          : "rgba(204,17,0,.09)",
                     borderColor:
-                      data.category === "busy"
-                        ? "blue"
-                        : data.category === "available"
-                          ? "green"
-                          : "red",
+                      data.category === "Busy"
+                        ? "#0D60D8"
+                        : data.category === "Available"
+                          ? "#0FB259"
+                          : "#FF2020",
                   }}
                 >
                   <span
                     className="  float-end px-3 py-1 text-white rounded-full"
                     style={{
                       backgroundColor:
-                        data.category === "busy"
-                          ? "blue"
-                          : data.category === "available"
-                            ? "green"
-                            : "red",
+                        data.category === "Busy"
+                          ? "#0D60D8"
+                          : data.category === "Available"
+                            ? "#0FB259"
+                            : "#F00000",
                         width:'min-content'
                     }}
                   >
@@ -69,11 +69,11 @@ const placeHolder = 'Search hospitals'
                     className=" text-2xl mt-2 "
                     style={{
                       color:
-                        data.category === "busy"
-                          ? "blue"
-                          : data.category === "available"
-                            ? "green"
-                            : "red",
+                        data.category === "Busy"
+                          ? "#0D60D8"
+                          : data.category === "Available"
+                            ? "#0FB259"
+                            : "#FF2020",
                     }}
                   >
                     {data.hospital_name} ({data.short_name.toUpperCase()})
@@ -89,23 +89,12 @@ const placeHolder = 'Search hospitals'
           {tasks.map((item) => {
             return (
                 <div>
-              <div className="inline-flex" key={item.id}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#cc1100"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1}
-                  stroke="currentColor"
-                  className="size-10  text-white flex items-center "
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z"
-                  />
-                </svg>
+
+              <div className="flex items-center mt-2 " key={item.id}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#F00000" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5M11 7h2v6h-2m0 2h2v2h-2"></path></svg>
+
                 <h1 className="ml-3 text-md text-grey mb-2">{item.message}</h1>
-              </div>
+                </div>
               </div>
             );
           })}
@@ -114,70 +103,29 @@ const placeHolder = 'Search hospitals'
           <div className="flex justify-between items-center">
             <div className="text-center">
               <Link to ="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#cc1100"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1}
-                  stroke="currentColor"
-                  className="size-6 text-red inline"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                  />
-                </svg>
-                <p className="text-red ">Home</p>
+              <img src="Frame 11.svg" alt="emergency logo" className="text-center  inline"/>
+            
+            <p className="text-grey text-xs">
+             Home
+            </p>
               </Link>
             </div>
             <div className="text-center">
               <Link to ="/first-aid" >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill=""
-                  viewBox="0 0 24 24"
-                  strokeWidth={7}
-                  stroke="#7D7D7D"
-                  className="size-6 inline"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
-                  />
-                </svg>
-
-                <p className="text-grey">
-                  First Aid <br /> Tips
-                </p>
+              <img src="ph_first-aid-fill.svg" alt="first-aid" className="text-center  inline"/>
+            
+            <p className="text-grey text-xs">
+             First aid tips
+            </p>
               </Link>
             </div>
             <div className="text-center">
               <Link>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="#7D7D7D"
-                  className="size-6 inline "
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                  />
-                </svg>
-
-                <p className="text-grey">
-                  Emergency <br /> Hotlines
-                </p>
+              <img src="hotlinebgrey.svg" alt="emergency logo" className="text-center  inline"/>
+            
+            <p className="text-grey text-xs">
+              Emergency  Hotlines
+            </p>
               </Link>
             </div>
           </div>
