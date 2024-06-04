@@ -20,32 +20,31 @@ export const FirstAidPage = ()=>{
            </div>
            <div className="px-6 py-2">
             <div className="flex justify-end items-center">
-                <h1 className="text-red2 text-sm">Watch more</h1> 
+                <h1 className="text-red3 text-sm">Watch more</h1> 
                 
             </div>
             <div className="overflow-auto">
             <div className="inline-flex gap-4 ">
                   <div className="mt-4 w-60 border-grey/50 border-2 p-4 rounded-md">
-                    <div className="flex ">
-                      <div>
+                    <div className="grid grid-cols-4 ">
+                      <div className="col-span-2">
                       <img src="./Vector.svg" alt="Burn accident"/>
-                          <p className="text-red2 text-sm ">Learn CPR in 2 minutes </p>
+                          <p className="text-red2 text-xs mt-3 ">Learn CPR in 2 minutes </p>
                       </div>
-                      <div>
-                        
+                      <div className="col-span-2">
+                        <img  src="./IMG-20240604-WA0018.jpg" alt="" className=" mt-4 "/>
                       </div>
                     </div>
                   
                   </div>
                   <div className="mt-4 w-60 border-grey/50 border-2 p-4 rounded-md">
-                    <div className="flex ">
-                      
-                      <div>
+                  <div className="grid grid-cols-4 ">
+                      <div className="col-span-2">
                       <img src="./Vector.svg" alt="Burn accident"/>
-                          <p className="text-green text-sm ">What to do when you have burns  </p>
+                          <p className="text-green text-xs  mt-3">What to do when you have burns </p>
                       </div>
-                      <div>
-                      
+                      <div className="col-span-2">
+                        <img  src="./IMG-20240604-WA0021.jpg" alt="" className=" mt-4  w-3/4"/>
                       </div>
                     </div>
                   
@@ -80,18 +79,14 @@ export const FirstAidPage = ()=>{
                           <Link to ="/first-aid" >
                           <img src="first aids tips active.svg" alt="First Aid icon" className="text-center  inline"/>
             
-                            <p className="text-red3 text-xs">
-                              First aid tips
-                            </p>
+                           
                           </Link>
                         </div>
                         <div className="text-center">
                           <Link>
                           <img src="hotlinebgrey.svg" alt="emergency logo" className="text-center  inline"/>
             
-                            <p className="text-grey text-xs">
-                              Emergency  Hotlines
-                            </p>
+                          
                           </Link>
                         </div>
                       </div>

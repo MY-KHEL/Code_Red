@@ -19,12 +19,12 @@ const placeHolder = 'Search hospitals'
             alt="logo"
             className="w-[128px]"
           />
-          <h1 className="text-[65px] mt-4 leading-8" >
+          <h1 className="text-[65px] mt-4 " style={{'lineHeight':'3.5rem'}} >
             Locate Bed Space Fast with{" "}
             <span className="text-red3">Code-Red</span>
           </h1>
 
-         <SearchForm placeHolder={placeHolder}/>
+         <SearchForm placeHolder={placeHolder}  />
           <div className="flex items-center justify-end text-red3 mt-4">
             <Link to="/view-all">View All</Link>
           </div>
@@ -103,7 +103,7 @@ const placeHolder = 'Search hospitals'
           <div className="flex justify-between items-center">
             <div className="text-center">
               <Link to ="/">
-              <img src="Frame 11.svg" alt="emergency logo" className="text-center  inline"/>
+              <img src="bitcoin-icons_home-filled.png" alt="emergency logo" className="text-center  inline"/>
             
             <p className="text-grey text-xs">
              Home
@@ -115,7 +115,8 @@ const placeHolder = 'Search hospitals'
               <img src="ph_first-aid-fill.svg" alt="first-aid" className="text-center  inline"/>
             
             <p className="text-grey text-xs">
-             First aid tips
+            First aid tips
+            
             </p>
               </Link>
             </div>
@@ -124,7 +125,7 @@ const placeHolder = 'Search hospitals'
               <img src="hotlinebgrey.svg" alt="emergency logo" className="text-center  inline"/>
             
             <p className="text-grey text-xs">
-              Emergency  Hotlines
+             
             </p>
               </Link>
             </div>
