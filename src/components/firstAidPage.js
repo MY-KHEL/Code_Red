@@ -58,7 +58,7 @@ export const FirstAidPage = ()=>{
             </div>
             {firstAidData.map((item)=>{
                 return(
-                    <div  key={item.id} className="mt-4">
+                    <div  key={item.id} className="mt-4 bg-grey/5 p-4">
                         <h1 className="text-sm text-black">{item.subheading}</h1>
                         <p className="text-xs text-grey">{item.text}</p>
                     </div>
