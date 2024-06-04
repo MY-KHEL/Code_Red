@@ -80,7 +80,7 @@ export const FirstAidPage = ()=>{
                           <Link to ="/first-aid" >
                           <img src="first aids tips active.svg" alt="First Aid icon" className="text-center  inline"/>
             
-                            <p className="text-red text-xs">
+                            <p className="text-red3 text-xs">
                               First aid tips
                             </p>
                           </Link>
